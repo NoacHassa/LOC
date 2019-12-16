@@ -23,8 +23,7 @@ public class countLOCfileTest {
     
     
      f= new File("keinKommentar.txt");
-     counter.countLOCfile(f);
-     assertEquals(counter.get_fileCounter(),12);
+     assertEquals(counter.countLOCfile(f),12);
    
    
     
@@ -33,31 +32,25 @@ public class countLOCfileTest {
   public void singleLineComment() {
     
     f=new File("singleLineComment1.txt");
-    counter.countLOCfile(f);
-    assertEquals(counter.get_fileCounter(),0);
+    assertEquals(counter.countLOCfile(f),0);
     f=new File("singleLineComment2.txt");
-    counter.countLOCfile(f);
-    assertEquals(counter.get_fileCounter(),5);
+    assertEquals(counter.countLOCfile(f),5);
     
   }
   @Test
   public void multiLineComment() {
     
     f=new File("multiLineComment1.txt");
-    counter.countLOCfile(f);
-    assertEquals(counter.get_fileCounter(),0);
+    assertEquals(counter.countLOCfile(f),0);
     
     f=new File("multiLineComment2.txt");
-    counter.countLOCfile(f);
-    assertEquals(counter.get_fileCounter(),2);
+    assertEquals(counter.countLOCfile(f),2);
     
     f=new File("multiLineComment3.txt");
-    counter.countLOCfile(f);
-    assertEquals(counter.get_fileCounter(),3);
+    assertEquals(counter.countLOCfile(f),3);
     
     f=new File("multiLineComment4.txt");
-    counter.countLOCfile(f);
-    assertEquals(counter.get_fileCounter(),3);
+    assertEquals(counter.countLOCfile(f),3);
     
     
   }
@@ -66,14 +59,10 @@ public class countLOCfileTest {
   public void mixedComment() {
     
     f=new File("mixedComment1.txt");
-    counter.countLOCfile(f);
-    System.out.println(counter.get_fileCounter());
-    assertEquals(counter.get_fileCounter(),4);
+    assertEquals(counter.countLOCfile(f),4);
     
     f=new File("mixedComment2.txt");
-    counter.countLOCfile(f);
-    System.out.println(counter.get_fileCounter());
-    assertEquals(counter.get_fileCounter(),8);
+    assertEquals(counter.countLOCfile(f),8);
    
     
   }
